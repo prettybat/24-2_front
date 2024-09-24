@@ -74,7 +74,7 @@ p paragraph
  
 ### a 태그를 사용해 링크를 걸기
 ---
-<p>엄마,<a href="/father.html">아빠</a>,저,동생, 그리고 흰둥이와 함께 살아요
+<p>엄마,<a href="/father.html">아빠</a>,저,동생, 그리고 흰둥이와 함께 살아요</p>
 
 
 ## 웹문서란 무엇일까
@@ -87,5 +87,8 @@ p paragraph
 목차 페이지는 '첫 시작점'
 따라서 index.html 페이지는 생략됨
 
-ex) google.com == google.com/index.html
+ex) google.com == google.com/index.html<br>
+
     naver.com == naver.com/index.html
+
+https://melodious-sable-ff9a4b.netlify.app/
