@@ -30,10 +30,85 @@ html 문서 내부에 style 태그를 사용하여 스타일 지정<br>
     - head 태그 : 브라우저가 사용하는 정보
     - body 태그 : 사용자가 보는 정보
 
-차이 비교해보기<br>
+*차이 비교해보기*<br>
 - 적용시점 : 헤드 태그에 있는 스타일은 페이지가 로드될 때 즉시 적용
 바디 태그에 있는 스타일은 해당 요소가 렌더링된 후에 적용되므로, 스타일 변화가 눈에 띄게 지연
 - 관리 용이성 : 헤드가 전체 스타일을 한 곳에서 정리할 수 있어 더욱 편리
 - 재사용성 : 헤드는 여러 페이지에 동일하게 적용가능하지만 바디는 특정 요소에 국한됨
 
 ## 외부 스타일 방식(external style)
+html 문서와는 별개의 파일에서 스타일을 지정하는 방법<br>
+스타일을 한 번에 작성해 여러 html문서 적용할 수 있어 유지보수에 용이<br>
+
+### 실습
+ * .css 확장파일을 만들고 link 태그로 연결<br>
+    ` <link rel = "stylesheet" href="./styel.css> ` <br>
+    head 태그 내부의 style 태그를 지우고 link태그를 통해 css파일을 연결<br>
+
+### 색상 정의
+- RGB : 0부터 255까지로 색감을 조절
+- HEX CODE : 256개 즉 16의 제곱의 경우의 수를 가짐
+<br>
+<br>
+<br>
+<br>
+
+## 추가 공부
+![margin & padding](F34A066E-BBB1-401C-8AE1-9746FA36575E.jpeg)
+### margin
+
+
+#### margin의 기본 개념
+* 정의: margin은 요소의 외부 공간을 정의하며, 다른 요소와의 간격을 조절합니다.
+* 속성:
+    - margin-top: 위쪽 여백
+    - margin-right: 오른쪽 여백
+    - margin-bottom: 아래쪽 여백
+    - margin-left: 왼쪽 여백
+    - margin: 네 방향 여백을 한 번에 설정할 수 있는 단축 속성
+
+* margin의 값
+    - 픽셀(px): 고정된 크기 지정
+    ```css
+        margin: 20px; /* 모든 방향에 20px 여백 */
+        margin: 10px 20px 10px 20px /* 각각 위쪽 오른쪽 아래쪽 왼쪽*/
+    ```
+
+    - 백분율(%): 부모 요소의 너비에 대한 비율로 지정
+    ```css
+
+    margin: 10%; /* 모든 방향에 부모 너비의 10% 여백 */
+    ```
+    - 자동(auto): 자동으로 여백을 설정하여 중앙 정렬 등에 사용
+    ```css
+
+    margin: auto; /* 수평 중앙 정렬 */
+    ```
+* margin collapse
+margin collapse: 인접한 블록 요소의 수직 여백이 겹쳐지는 현상. <br>
+ex) 두 개의 인접한 블록 요소가 각각 margin-bottom과 margin-top을 가질 때, 이 두 여백이 합쳐져서 더 큰 여백으로 나타날 수 있음
+
+* 예제
+```
+.box {
+  margin: 20px;            /* 모든 방향에 20px 여백 */
+}
+
+.box-top {
+  margin-top: 10px;       /* 위쪽에 10px 여백 */
+}
+
+.box-left-right {
+  margin: 0 15px;         /* 위아래는 0, 좌우는 15px 여백 */
+}
+
+.box-auto {
+  margin: auto;           /* 자동 여백으로 중앙 정렬 */
+}
+```
+
+
+
+
+
+### padding
