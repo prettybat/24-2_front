@@ -59,34 +59,43 @@ html 문서와는 별개의 파일에서 스타일을 지정하는 방법<br>
 
 
 #### margin의 기본 개념
-* 정의: margin은 요소의 외부 공간을 정의하며, 다른 요소와의 간격을 조절합니다.
+* 정의: margin은 요소의 외부 공간을 정의하며, 다른 요소와의 간격을 조절
 * 속성:
     - margin-top: 위쪽 여백
     - margin-right: 오른쪽 여백
     - margin-bottom: 아래쪽 여백
     - margin-left: 왼쪽 여백
     - margin: 네 방향 여백을 한 번에 설정할 수 있는 단축 속성
+<br>
+<br>
 
 * margin의 값
     - 픽셀(px): 고정된 크기 지정
     ```css
-        margin: 20px; /* 모든 방향에 20px 여백 */
-        margin: 10px 20px 10px 20px /* 각각 위쪽 오른쪽 아래쪽 왼쪽*/
+        margin: 20px;                    /* 모든 방향에 20px 여백 */
+        margin: 10px 20px 10px 20px;     /* 각각 위쪽 오른쪽 아래쪽 왼쪽*/
     ```
 
     - 백분율(%): 부모 요소의 너비에 대한 비율로 지정
     ```css
 
-    margin: 10%; /* 모든 방향에 부모 너비의 10% 여백 */
+    margin: 10%;        /* 모든 방향에 부모 너비의 10% 여백 */
     ```
     - 자동(auto): 자동으로 여백을 설정하여 중앙 정렬 등에 사용
     ```css
 
-    margin: auto; /* 수평 중앙 정렬 */
+    margin: auto;       /* 수평 중앙 정렬 */
     ```
+
+<br>
+<br>
+<br>
+
 * margin collapse
 margin collapse: 인접한 블록 요소의 수직 여백이 겹쳐지는 현상. <br>
 ex) 두 개의 인접한 블록 요소가 각각 margin-bottom과 margin-top을 가질 때, 이 두 여백이 합쳐져서 더 큰 여백으로 나타날 수 있음
+<br>
+<br>
 
 * 예제
 ```
@@ -106,9 +115,43 @@ ex) 두 개의 인접한 블록 요소가 각각 margin-bottom과 margin-top을 
   margin: auto;           /* 자동 여백으로 중앙 정렬 */
 }
 ```
-
-
-
-
+<br>
+<br>
+<br>
 
 ### padding
+
+* 개념<br>
+padding은 요소의 내용(텍스트, 이미지 등)과 요소의 경계(테두리) 사이의 공간을 의미<br>
+이 공간을 조절하여 내용을 더 깔끔하게 표현<br>
+
+* 다양한 패딩 설정
+    - 개별 방향 설정
+    ```css
+
+    .box {
+    padding-top: 10px;      /* 위쪽에 10px 패딩 */
+    padding-right: 20px;    /* 오른쪽에 20px 패딩 */
+    padding-bottom: 30px;   /* 아래쪽에 30px 패딩 */
+    padding-left: 40px;     /* 왼쪽에 40px 패딩 */
+    }
+    ```
+    <br>
+    <br>
+
+    - 한 번에 설정하기
+     ```css
+
+    .box {
+    padding: 10px 20px; /* 위/아래 10px, 좌/우 20px */
+    }
+    ```
+
+
+    * 모두 다르게 설정하기
+    ```css
+
+    .box {
+    padding: 10px 20px 30px 40px; /* 위 10px, 오른쪽 20px, 아래 30px, 왼쪽 40px */
+    }
+    ```
